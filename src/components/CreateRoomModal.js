@@ -45,7 +45,7 @@ export default function CreateRoomModal(props) {
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="primary" onClick={handleSubmit}>
+        <Button variant="primary" onClick={handleSubmit} >
           Create room
         </Button>
       </Modal.Footer>
