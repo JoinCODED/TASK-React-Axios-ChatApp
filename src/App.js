@@ -52,7 +52,7 @@ function App() {
           </Route>
           <Route exact path="/">
             <center>
-              <ChatRoomsList rooms={rooms} />
+              <ChatRoomsList rooms={rooms} /> 
             </center>
           </Route>
         </Switch>

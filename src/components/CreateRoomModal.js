@@ -8,10 +8,13 @@ export default function CreateRoomModal(props) {
     description: '',
     messages: [],
   });
-  const handleChange = (event) => {
+  const handleChange = (e) => {
+    setRoom({...room, [e.target.name]: e.target.value})
     // to do : setRoom state based in input
   };
-  const handleSubmit = (event) => {
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
     // to do : stop page from refreshing
     // call a function from app to create a room (pass room as a parameter)
 

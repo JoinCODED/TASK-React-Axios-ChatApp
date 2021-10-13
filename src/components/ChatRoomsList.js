@@ -16,7 +16,7 @@ function ChatRoomsList(props) {
     <div className="main__chatlist">
       <button className="btn">
         <i className="fa fa-plus"></i>
-        <span onClick={openModal}>New room</span>
+        <span onClick={openModal}>New room </span>
         <CreateRoomModal isOpen={isOpen} closeModal={closeModal} />
       </button>
       <center>
@@ -30,3 +30,5 @@ function ChatRoomsList(props) {
   );
 }
 export default ChatRoomsList;
+
+
