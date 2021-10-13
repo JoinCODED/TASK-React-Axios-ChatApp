@@ -65,13 +65,25 @@ function App() {
     }
   };
 
+  const createMessage = async (roomId, msg) => {
+    try {
+      const response = await axios.post(
+        `https://coded-task-axios-be.herokuapp.com/rooms/msg/${roomId}`,
+        msg
+      );
+      fetchRooms();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   // to do : call BE to delete a room
   return (
     <div className="__main">
       <div className="main__chatbody">
         <Switch>
           <Route path="/room/:roomSlug">
-            <ChatRoom rooms={rooms} />
+            <ChatRoom rooms={rooms} createMessage={createMessage} />
           </Route>
           <Route exact path="/">
             <center>

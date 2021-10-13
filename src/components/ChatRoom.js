@@ -13,6 +13,8 @@ function ChatRoom(props) {
     setMsg({ ...msg, [event.target.name]: event.target.value });
   };
   const handleSubmit = (event) => {
+    event.preventDefault();
+    props.createMessage (room.id, msg);
 
 
   };
